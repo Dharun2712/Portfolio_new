@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Portfolio Inquiry</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <!-- Gmail Hidden Preview Text (Requirement 4) -->
+  <div style="display: none; font-size: 1px; color: #f1f5f9; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+    New message from {{user_name}} — {{subject}}. Open this email to read the full message.
+  </div>
+
+  <!-- Container -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f1f5f9; padding: 36px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0;">
+          
+          <!-- Dark Navy Header (Requirement 3) -->
+          <tr>
+            <td style="background-color: #0a192f; padding: 32px 36px; text-align: left;">
+              <div style="display: inline-block; background-color: rgba(213, 255, 98, 0.15); border: 1px solid #d5ff62; border-radius: 4px; padding: 4px 10px; font-size: 11px; font-weight: 700; color: #d5ff62; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px;">
+                ● Portfolio Contact Form
+              </div>
+              <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.3;">
+                New Inquiry Received
+              </h1>
+              <p style="margin: 6px 0 0; color: #94a3b8; font-size: 13px; line-height: 1.5;">
+                From Dharun Kumar M Portfolio (dharun2712.github.io)
+              </p>
+            </td>
+          </tr>
+
+          <!-- Clean White Content Area -->
+          <tr>
+            <td style="padding: 36px; background-color: #ffffff;">
+              
+              <!-- Greeting / Summary -->
+              <p style="margin: 0 0 24px; color: #334155; font-size: 15px; line-height: 1.6;">
+                You have received a new contact submission from your portfolio website. Details and message are below:
+              </p>
+
+              <!-- Visitor Contact Details Table -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 24px;">
+                <tr>
+                  <td style="padding: 14px 18px; border-bottom: 1px solid #e2e8f0; width: 130px; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Visitor Name
+                  </td>
+                  <td style="padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 14px; font-weight: 600; color: #0f172a;">
+                    {{user_name}}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Email Address
+                  </td>
+                  <td style="padding: 14px 18px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #0284c7; font-weight: 500;">
+                    <a href="mailto:{{user_email}}" style="color: #0284c7; text-decoration: none;">{{user_email}}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 14px 18px; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Subject
+                  </td>
+                  <td style="padding: 14px 18px; font-size: 14px; font-weight: 600; color: #0f172a;">
+                    {{subject}}
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Highlighted Message Section -->
+              <div style="margin-bottom: 28px;">
+                <div style="font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+                  Message
+                </div>
+                <div style="background-color: #f1f5f9; border-left: 4px solid #0a192f; border-radius: 4px; padding: 18px 20px; font-size: 14px; line-height: 1.7; color: #1e293b; white-space: pre-wrap;">{{message}}</div>
+              </div>
+
+              <!-- Reply to Visitor CTA Button -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 12px;">
+                <tr>
+                  <td align="center" style="border-radius: 6px; background-color: #0a192f;">
+                    <a href="mailto:{{user_email}}?subject=Re: {{subject}}" target="_blank" style="display: inline-block; padding: 13px 26px; font-size: 13px; font-weight: 700; color: #ffffff; text-decoration: none; border-radius: 6px; letter-spacing: 0.04em;">
+                      Reply to {{user_name}} &rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 12px 0 0; font-size: 12px; color: #94a3b8;">
+                Tip: You can also reply directly to this email because the <code>Reply-To</code> header is set to <strong>{{user_email}}</strong>.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Professional Footer -->
+          <tr>
+            <td style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 22px 36px; text-align: center;">
+              <p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; color: #0f172a;">
+                Dharun Kumar M &bull; Software Development Engineer Portfolio
+              </p>
+              <p style="margin: 0; font-size: 12px; color: #64748b;">
+                <a href="https://dharun2712.github.io/Portfolio_new/" style="color: #64748b; text-decoration: underline;">dharun2712.github.io/Portfolio_new</a> &bull; MKCE B.E. CSE
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
+

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- EmailJS Browser SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
   <!-- SCROLL-DRIVEN PRELOADER TRACK (Controlled by Scroll) -->
@@ -100,7 +102,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn-primary" href="#work">EXPLORE WORK <span>↓</span></a>
-            <a class="btn-secondary" href="mailto:dharunkumarm2005@gmail.com">HIRE ME <span>↗</span></a>
+            <a class="btn-secondary" href="#contact">HIRE ME <span>↗</span></a>
           </div>
           <div class="hero-quick-links">
             <a href="https://linkedin.com/in/dharunkumar-dev" target="_blank" rel="noreferrer" class="quick-chip">
@@ -859,23 +861,99 @@
 
     <!-- FOOTER / CONTACT SECTION (LEESHARK AESTHETICS) -->
     <footer class="leeshark-footer" id="contact">
-      <!-- Top Row: Connect With Me (Left) & Let's Build Something (Right) -->
+      <!-- Top Row: Connect With Me (Left) & Contact Form (Right) -->
       <div class="footer-top-grid">
         <div class="footer-connect-col">
-          <span class="footer-eyebrow-label">Connect with me</span>
+          <span class="footer-eyebrow-label">06 / GET IN TOUCH</span>
+          <h2 class="footer-connect-heading">Let's connect & <em>collaborate.</em></h2>
+          <p class="footer-connect-intro">
+            Open to Software Development Engineer roles, full-stack internships, and technical collaborations. Have a project or opportunity? Send me a message below!
+          </p>
           <a href="mailto:dharunkumarm2005@gmail.com" class="footer-email-headline">dharunkumarm2005@gmail.com</a>
-          <nav class="footer-subnav" aria-label="Footer links">
+          
+          <div class="footer-status-pill">
+            <span class="status-dot live-pulse"></span>
+            <span>OPEN TO SDE ROLES &amp; INTERNSHIPS</span>
+          </div>
+
+          <div class="footer-direct-grid">
+            <div class="direct-item">
+              <span class="direct-label">PHONE</span>
+              <a href="tel:+919566340976" class="direct-val">+91 9566340976</a>
+            </div>
+            <div class="direct-item">
+              <span class="direct-label">LOCATION</span>
+              <span class="direct-val">Tamil Nadu, India</span>
+            </div>
+            <div class="direct-item">
+              <span class="direct-label">TIMEZONE</span>
+              <span class="direct-val">IST (UTC +5:30)</span>
+            </div>
+          </div>
+
+          <nav class="footer-subnav" aria-label="Footer navigation">
             <a href="#home">Home</a>
             <a href="#intro">About</a>
-            <a href="#work">Services</a>
             <a href="#work">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
           </nav>
         </div>
 
-        <div class="footer-build-col">
-          <h3 class="footer-build-title">Let's build something</h3>
-          <p class="footer-build-desc">Open for freelance opportunities and collaborations.</p>
-          <a href="mailto:dharunkumarm2005@gmail.com" class="footer-pill-cta">Get in touch</a>
+        <div class="footer-form-col" id="contact-form-card">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <div class="contact-badge">
+                <span class="badge-dot"></span>
+                <span>DIRECT INQUIRY FORM</span>
+              </div>
+              <h3 class="contact-title">Send a message</h3>
+              <p class="contact-desc">
+                Fill out the form below. Messages are routed directly to my personal inbox via EmailJS.
+              </p>
+            </div>
+
+            <form id="portfolio-contact-form" class="portfolio-contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="user_name">Full Name <span class="req">*</span></label>
+                  <input type="text" id="user_name" name="user_name" placeholder="John Doe" required autocomplete="name">
+                  <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="user_email">Email Address <span class="req">*</span></label>
+                  <input type="email" id="user_email" name="user_email" placeholder="john@example.com" required autocomplete="email">
+                  <span class="field-error" id="email-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="req">*</span></label>
+                <input type="text" id="subject" name="subject" placeholder="SDE Role / Project Collaboration / Inquiry" required>
+                <span class="field-error" id="subject-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="4" placeholder="Hello Dharun, I came across your portfolio and would like to connect regarding..." required></textarea>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" id="contact-submit-btn" class="contact-submit-btn">
+                  <span class="btn-text">SEND MESSAGE</span>
+                  <span class="btn-arrow">↗</span>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+                <span class="form-note">🔒 Powered by EmailJS</span>
+              </div>
+
+              <!-- Status Alert Banners -->
+              <div id="form-status-alert" class="form-status-alert" role="alert" style="display: none;"></div>
+            </form>
+          </div>
         </div>
       </div>
 
