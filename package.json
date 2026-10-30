@@ -1,0 +1,17 @@
+{
+  "name": "dharun-portfolio",
+  "version": "1.0.0",
+  "description": "Dharun Kumar M — Software Development Engineer Portfolio",
+  "scripts": {
+    "dev": "npx -y serve . -l 4173",
+    "start": "npx -y serve . -l 4173",
+    "serve": "python -m http.server 4173"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "dharun-kumar"
+  ],
+  "author": "Dharun Kumar M",
+  "license": "ISC"
+}
